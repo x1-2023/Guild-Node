@@ -4,7 +4,7 @@
 sudo ufw disable
 ```
 
-* Cài đặt docker
+* Cài đặt docker (Nếu đã có docker thì bỏ qua)
 ```
 sudo apt update -y && apt upgrade -y
 ```
