@@ -1,4 +1,15 @@
 ***cc3Node***
+* Đổi mật khẩu người dùng Root
+```
+sudo passwd root
+```
+Nhập pass của người dùng hiện tại, sau đo nhập pass mới và xác nhận lại pass
+
+* Chuyển đổi sang người dùng root
+```
+sudo -i
+```
+
 * Tắt Firewall
 ```
 sudo ufw disable
