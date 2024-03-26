@@ -1,4 +1,8 @@
 ***cc3Node***
+* Tắt Firewall
+```
+sudo ufw disable
+```
 
 * Cài đặt docker
 ```
