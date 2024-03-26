@@ -1,7 +1,6 @@
-# cc3Node
-Guidl Node
+***cc3Node***
 
-#Cài đặt docker
+* Cài đặt docker
 ```
 sudo apt update -y && apt upgrade -y
 ```
@@ -27,13 +26,16 @@ sudo systemctl status docker
 ```
 docker info
 ```
+* Tải Docker image
 ```
 sudo docker pull gluwa/creditcoin3:3.23.0-testnet
 ```
+* Tạo thư mục và phân quyền
 ```
 mkdir ~/chain_data
 chmod -R 777 ~/chain_data
 ```
+*Chạy Node (nhớ sửa tên, ip...)
 ```
 docker run \
  --name creditcoin-validator \
@@ -49,42 +51,42 @@ docker run \
  --port 30333 # the port to use for node-to-node communications
 ```
 
-Chờ nó sync khoảng 30'
+*Chờ nó sync khoảng 30'
 
-Chạy lệnh check xem node có hoạt động không:
+*Chạy lệnh check xem node có hoạt động không:
 ```
 docker exec -it creditcoin-validator creditcoin --help
 ```
 
-Tạo một tài khoản mới: 
+*Tạo một tài khoản mới: 
 ```
 docker exec creditcoin-validator creditcoin new
 ```
-Backup seedphare
+*Nhớ Backup seedphare
 
-Sử dụng lệnh này để kiểm tra địa chỉ ví: 
+*Sử dụng lệnh này để kiểm tra địa chỉ ví: 
 ```
 docker exec -it creditcoin-validator creditcoin show-address
 ```
 
-Sau đó hãy faucet hoặc chuyển ctc sang 
+*Sau đó hãy faucet hoặc chuyển ctc sang 
 
-Kiểm tra  balance ví : 
+*Kiểm tra  balance ví : 
 ```
 docker exec -it creditcoin-validator creditcoin balance --substrate-address <địa chỉ ví>
 ```
 
-tạo Validator
+*Tạo Validator
 ```
 docker exec -it creditcoin-validator creditcoin wizard --amount 20100
 ```
 
-Kiểm tra trạng thái validator:
+*Kiểm tra trạng thái validator:
 ```
 docker exec -it creditcoin-validator creditcoin status --substrate-address <địa chỉ ví>
 ```
 
-Chờ nó thôi
+*Hỏi mấy thằng trên discord chúng nó bảo chờ 1-2 ngày thì mới Active
 
 
 
