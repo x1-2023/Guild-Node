@@ -15,6 +15,43 @@ sudo -i
 sudo ufw disable
 ```
 
+*** Setup Proxy ***
+```
+sudo nano /etc/environment
+```
+
+Thêm các dòng sau vào cuối tệp cấu hình (thay bằng địa chỉ proxy)
+
+```
+http_proxy="http://mobi4:Mobi1234@proxy.nodegenius.xyz:5104/"
+https_proxy="http://mobi4:Mobi1234@proxy.nodegenius.xyz:5104/"
+ftp_proxy="http://mobi4:Mobi1234@proxy.nodegenius.xyz:5104/"
+```
+Nhấn Ctrl + X, sau đó nhấn Y và enter để lưu và đóng tệp
+
+```
+source /etc/environment
+```
+
+Tiếp theo reset lại server bằng lệnh:
+
+```
+sudo reboot
+```
+
+Check xem proxy đã hoạt động chưa
+```
+env | grep -i proxy
+```
+
+Kiểm tra địa chỉ Ip hiện tại bằng 1 trong 2 cách dưới đây
+```
+curl icanhazip.com
+```
+
+```
+wget -qO- https://api.ipify.org
+```
 * Cài đặt docker (Nếu đã có docker thì bỏ qua)
 ```
 sudo apt update -y && apt upgrade -y
