@@ -95,7 +95,6 @@ docker run \
  -v ~/chain_data:/data \
  gluwa/creditcoin3:3.23.0-testnet `# Enter latest testnet image` \
  --name "NodeGenius" `# Thay Tên` \
- --public-addr "/dns4/4gdata.vinaddns.com/tcp/30333" `#thay IP`\
  --chain testnet `# we want to connect to the testnet` \
  --bootnodes "/dns4/cc3-test-bootnode.creditcoin.network/tcp/30333/p2p/12D3KooWAxmsWr6iEjFyLqQBzfLvbCRTAhYBeszyr8UWgQx6Zu7K" \
  --validator `# we want to run a validator node` \
