@@ -15,5 +15,7 @@ sau đó thay id vào container name ở dưới
 ```
 docker exec -it <container_name> analog-node status
 ```
-```docker exec -it <container_name> sh -c "echo $PATH"```
+```
+docker exec -it <container_name> sh -c "echo $PATH"
+```
 
