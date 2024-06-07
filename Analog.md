@@ -22,3 +22,6 @@ Check log
 ```
 docker logs <container_name>
 ```
+```
+docker exec -it <container_id> /usr/local/bin/analog-node identity show
+```
